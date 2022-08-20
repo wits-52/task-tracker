@@ -1,0 +1,7 @@
+.add-form {
+    margin-bottom: 50px;
+}
+.invalid-input {
+    border-color: red;
+    background-color:  red;
+}

@@ -1,0 +1,15 @@
+<form *ngIf="addTaskState" class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="Title">Title</label>
+        <input [ngStyle]="{'invalid-input': !title}" name="title" id="title" placeholder="Add Title" [(ngModel)]="title">
+    </div>
+    <div class="form-control" [ngStyle]="{'invalid-input': !dayTimeValid}">
+        <label for="Day & Time">Day & Time</label>
+        <input name="dayTime" id="dayTime" placeholder="Add DayTime" [(ngModel)]="dayTime">
+    </div>
+    <div class="form-control form-control-check">
+        <label for="reminder">Set Reminder</label>
+        <input type="checkbox" name="reminder" id="reminder" [(ngModel)]="reminder">
+    </div>
+  <input type="submit" value="Save Task" class="btn btn-block" />
+</form>
